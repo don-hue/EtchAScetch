@@ -4,6 +4,13 @@ let strDimension="";
 let test=0
 let priorGridCount=0;
 
+
+function colorHover(){
+    console.log("hello");
+}
+
+
+//-----------------------calculate rows----------------------------
 function multi(){
     const input=document.getElementById('margin').value;
     let heightWidth=0;
@@ -18,14 +25,17 @@ function multi(){
         error=document.getElementById('margin').placeholder="Max Rows are 10";
     }
 }
+//-----------------------------------------------------------------
+
+//----------------------create grid and play---------------------------------
 function createGrid() {
     if(test==0){
         for(i=0;i<multi();i++) {
-            let i=document.createElement('div');
-            i.id=('square');
-            container.appendChild(i);
-            i.style.height=strDimension;
-            i.style.width=strDimension;
+            const div=document.createElement('div');
+            div.id=('square');
+            container.appendChild(div).classList.add('box');
+            div.style.height=strDimension;
+            div.style.width=strDimension;
         }
         test=1;
         priorGridCount=i;
@@ -36,15 +46,26 @@ function createGrid() {
             container.removeChild(nice);
         }
         for(i=0;i<multi();i++) {
-            let i=document.createElement('div');
-            i.id=('square');
-            container.appendChild(i);
-            i.style.height=strDimension;
-            i.style.width=strDimension;
+            const div=document.createElement('div');
+            div.id=('square');
+            container.appendChild(div).classList.add('box');
+            div.style.height=strDimension;
+            div.style.width=strDimension;
         }
-        priorGridCount=i
+        priorGridCount=i;
     }
+    function greyColor() {
+        const boxs=container.querySelectorAll('.box');
+        boxs.forEach(box => box.addEventListener('mouseover',()=> {
+            let R=Math.floor(Math.random()*255);
+            let G=Math.floor(Math.random()*255);
+            let B=Math.floor(Math.random()*255);
+            box.style.background = `rgb(${R},${G},${B})`;
+        }))  
+    }
+    greyColor();
 }
-
 btn.addEventListener("click", createGrid);
+
+
 
