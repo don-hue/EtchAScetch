@@ -1,0 +1,36 @@
+html {
+    background: #eeeae3;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 5rem;
+}
+#main {
+    display:flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+#container {
+    display: flex;
+    background: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    flex-wrap: wrap;
+    
+}
+#square{
+    border:1px solid grey;
+    border-radius: 3px;
+    height: 28px;
+    width: 28px;
+}
+.input {
+    font-size: 15px;
+}
+#margin {
+    margin-top: 20px;
+}
