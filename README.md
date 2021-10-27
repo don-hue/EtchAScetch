@@ -1,3 +1,8 @@
-# EtchAScetch
+# Etch-A-Scetch
 
-This is another project for an interactive Website using HTML, CSS and Javascript
+A simple Etch-A-Scetch to practise my Wev-Dev skills
+
+## Tech Stack 
+- HTML 
+- CSS
+- Javascript
